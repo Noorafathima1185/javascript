@@ -1,0 +1,312 @@
+JavaScript
+-------------
+-JavaScript version ES6
+it can be used in both frontend as well as backend
+frontend - behaviour (browser)
+backend - logical operations (node js)
+it also known as single thread programming
+line by line execution
+Dynamically typed language 
+
+backend
+-----------
+node js - its an open source JavaScript runtime environment that execute js code outside the web browser
+to save - filename.js
+for display - console.log(content)
+	 -console.log("output is",value);
+to open terminal - ctrl+j
+
+datatypes
+------------
+1.primitive datatypes (unique)
+-------------------------
+a.string - contents in double quotes
+b.number - float and integer
+c.boolean - true or false
+d.bigInt - large numbers (numbers larger than 2^53 and numbers lessthan -2^53)
+e.undefined - variables declared but values are not assigned eg: let x;
+f.null - null value let x=null;
+g.symbol - to provide unique identifier
+
+2.Non-primitive datatypes
+(combination of primitive datatypes)
+------------------------------------------------
+object - values are stored as key:value pairs 
+
+Variables
+------------
+variables are used to store data
+identifiers - rules to create variables
+1.it can be started with alphabets, dollar symbol($) or underscore(_)
+2.First character can be followed by alphabets, dollar, underscore and digits.
+3.Digits cannot be placed as the first character
+4.can use more than one words , but the words should not have space
+ - second word can start with capital letter (camel case) or use underscore to separate words.
+
+syntax : variable_name = value ;
+eg : x=10;
+keyword variable_name = value;
+keyword : predefined/reserved set of words which gives a special meaning to the variable.
+                   1.const - Reassigning not possible ( hoisting not possible )
+                   2.var - Reassigning is possible ( hoisting possible )
+                   3.let - Reassigning possible  - block level (starting from one curly bracket and ends with another curly bracket{}) - hoisting not possible
+variable hoisting : using a variable before it is declared
+eg: console.log(x)
+      x=10;
+
+concatination(addition)
+-----------------------
+- simply refers to adding two datatypes
+- number + number gives number
+    eg: x=10+10;
+    console.log(x) gives 20
+-string + string gives string 
+    eg: x= "10" + "20"
+    console.log(x) gives 1020
+-string + number gives string 
+    eg: x= 10 + "20"
+    console.log(x) gives 1020
+
+Template literals
+-----------------
+-another way of displaying contents 
+`content ${variable_name}`
+OPERATORS
+---------
+1.Arithmetic Operators {+(add), -(minus), /(div), *(multi), **(^ exponential(power)), %(modulas)}
+eg: x=5;
+y=10;
+console.log(`sum of ${x} and ${y} is ${x+y}`)
+console.log(`sub of ${x} and ${y} is ${x-y}`)
+console.log(`product of ${x} and ${y} is ${x*y}`)
+console.log(`remainder of ${x} and ${y} is ${x%y}`)
+console.log(`div of ${x} and ${y} is ${x/y}`)
+
+2.Assignment Operators {=}
+
+3.Relational Operators {>,>=,<,<=,==,===}
+- == value (left value is same as right value) - comparison 
+- === check  value and datatypes and return true or false 
+
+4.logical operators {&&(and), ||(or), !(not)} - returns boolean values
+- &&(and) - returns true when the two operations are true
+    T && T - T
+    T && F - F
+    F && T - F 
+    F && F - F 
+-||(or) - returns true when atleast one operation is true
+    T || T - T 
+    T || F - T 
+    F || T - T 
+    F || F - F
+- !(not) - gives opposite
+
+
+5.increment and decrement operators
+----------------------------------
+increment (++) - add 1 to the current value
+decrement(--) - substract 1 from the current value
+
+6.short hand operators
+----------------------
+x=x+y;
+using short hand operators it can be wriiten as x+=y
+
+7.ternary operators
+-------------------
+syntax : condition?true statement:false statement
+
+conditional statements / decision making statements
+---------------------------------------------------
+1.if else
+---------
+syntax :
+if(condition){
+    statements;
+}
+else{
+    statements;
+}
+2.if else if
+------------
+if(condition){
+    statements;
+}
+else if(condition){
+    statements;
+}
+else{
+    statements;
+}
+
+looping statements
+-----------------
+-to do task repeatedly
+1.while
+2.for 
+
+1.while
+--------
+syntax
+variable initialisation
+while(condition){
+    statement
+    exit condition
+}
+
+2.for
+-----
+syntax
+for(variable initialisation;condition;exit condition){
+    statements;
+}
+3.nested loops
+--------------
+loop within another loop
+
+function
+---------
+-functions are used to do task repeated at different position
+-variables inside a function is having block scope
+-to access the variable outside we need to return the variable
+-no statement after the return statement will be executed.so return statement should be placed as the last statement of the function.
+part of functions
+------------------
+1)function definition
+    -statement
+    -syntax
+     -------
+     function name(arguments/parameters){
+        statements
+     }
+2)function call
+    -to execute the function
+    -syntax
+     name()
+
+arguments or parameters - the values given to a function to do a certain task (it provide inside the bracket)
+
+functional hoisting
+-------------------
+- calling a function  before a function is defined
+- normal function have functional hoisting
+
+2)Arrow function
+---------------
+-ES6 
+-syntax
+--------
+const variable = (arguments)=>{
+    statement
+}
+-functional hoisting is not possible
+
+3)predefined functions
+----------------------
+- built in function of a particular language
+eg: console.log()
+    typeOf()
+    parseInt()
+    Math.floor()
+    Alert()
+
+4)call back function
+--------------------
+- function calling another function
+- call back function comes as an argument to the another function
+
+5)nested function
+-----------------
+- function definition inside another function
+- closure property:property of a parent function can be accessed inside a child function but not vice versa
+
+asynchronous functions - functions with time delay
+synchronous - functions without time delay
+
+
+Data Structure
+---------------
+- a specialised format of organizing , processing retrieving and storing data.
+- array , stack , queue , list linkedlist , tree, graph , hash etc..
+
+
+Array 
+------
+-unlike variables array can store more than one data(can be any type)
+definition: Array is a single variable which can store more than one value that are separated by comas and enclosed within a square bracket.
+
+-syntax
+-------
+arrayname = [item1, item2,........itemn]
+
+-stored has key value pairs
+key => index
+value => items of the array
+
+index => indicate the position of item in an array
+      => its value starts from 0
+
+length = total no.of items/memory locations
+       => starts from 1
+
+array methods
+--------------
+1) push - to add items to the end of an array
+2) pop - to remove an item from an array
+3) unshift - to add item to the start of an array
+4) shift - to remove an item from the start 
+5) sort - to arrange an array in ascending or descending order
+6) flat() - used to changes the dimension of an array - 2D->1D , 3D->2D... it return an array
+7) map() - for - return an array of same no.of emlement as that of its parent
+8) forEach() - same as that of for of loop - return void - so that further acvtivity(array methods) cannot be executed.
+9) reduce() - return a single value - eg: highest,lowest,sum,product,average etc...
+10) filter() - it returns an array satisfying a specific condition.
+                    array.filter(variable=>condition)
+11) some() - it returns true or false based on the condition applied to an array   (true or false)
+12) find() - it returns first element that satisfy the condition.
+13) includes() - to check an item present in the array or not.
+14) indexOf() - to find the index of a given element in an array.
+15) splice() - to add and remove items at a particular position.
+          array.slice(index, number of items to be removed, items to be added)
+16) slice() - method used to extract a section of an array and return a new array without modifying the origin array.
+         array.slice(startIndex,endIndex)
+         - endIndex will not be included(excluded)
+17) reduceRight() - iteration starts from right and reduce into a single value.
+
+
+
+different way to access array item
+----------------------------------
+1)for loop
+2)in - directly access the index of an array with explicitly writing the condition and increment operators. (index)
+3)of - directly access the items in an array
+
+Binary Search
+-------------
+- reduces the time delay (better than linear search)
+-array should be arranged in ascending order
+
+Nested Array
+------------
+- array within another array
+
+
+string methods
+--------------
+1) startsWith() - check whether the given string starts with a particular character.
+             - returns boolean values
+             - case sensitive
+
+2) endsWith() - check whether the given string ends with a particular character.
+             - returns boolean values
+             - case sensitive
+
+3) toUpperCase() - to convert the given string into capital letter.
+
+4) toLowerCase() - to convert the given string into small letter.
+
+5) trim() - to remove blank space at the start and ends.
+
+6) substring() - to create a substring from a given string 
+     array.substring(startIndex,endIndex)
+     endIndex is exluded
