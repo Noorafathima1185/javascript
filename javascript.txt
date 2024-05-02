@@ -1,5 +1,8 @@
-JavaScript
--------------
+module-2  JavaScript
+--------------------
+procedural programing - programing paradigm where series of computational steps are carried out.
+- unlike oops,where data and methods were tied togather(encapsulated) into class and object,procedural programing uses data and methods/functions has two dffrnt entities.
+
 -JavaScript version ES6
 it can be used in both frontend as well as backend
 frontend - behaviour (browser)
@@ -36,6 +39,7 @@ object - values are stored as key:value pairs
 Variables
 ------------
 variables are used to store data
+
 identifiers - rules to create variables
 1.it can be started with alphabets, dollar symbol($) or underscore(_)
 2.First character can be followed by alphabets, dollar, underscore and digits.
@@ -71,6 +75,7 @@ Template literals
 -----------------
 -another way of displaying contents 
 `content ${variable_name}`
+
 OPERATORS
 ---------
 1.Arithmetic Operators {+(add), -(minus), /(div), *(multi), **(^ exponential(power)), %(modulas)}
@@ -170,15 +175,19 @@ function
 -variables inside a function is having block scope
 -to access the variable outside we need to return the variable
 -no statement after the return statement will be executed.so return statement should be placed as the last statement of the function.
+
 part of functions
 ------------------
 1)function definition
     -statement
     -syntax
      -------
-     function name(arguments/parameters){
+     function name(arguments/parameters 1.........argn){
         statements
      }
+
+arg -  data from outside that are need to execute the task
+
 2)function call
     -to execute the function
     -syntax
@@ -294,12 +303,12 @@ Nested Array
 string methods
 --------------
 1) startsWith() - check whether the given string starts with a particular character.
-             - returns boolean values
-             - case sensitive
+                - returns boolean values
+                - case sensitive
 
 2) endsWith() - check whether the given string ends with a particular character.
-             - returns boolean values
-             - case sensitive
+              - returns boolean values
+              - case sensitive
 
 3) toUpperCase() - to convert the given string into capital letter.
 
@@ -307,6 +316,81 @@ string methods
 
 5) trim() - to remove blank space at the start and ends.
 
-6) substring() - to create a substring from a given string 
+6) substring() - to create a substring from a given string.
      array.substring(startIndex,endIndex)
      endIndex is exluded
+
+7) slice() - string.slice(startIndex,endIndex)
+     endIndex will be excluded
+     accept negative values
+     starts from end of the string 
+
+8) split(value) - divide the given string into substring  based on a particular value.
+     it returns an array
+
+9) replace(searchvalue,replacevalue) - replace a particular word/character from a given string.
+    replace first matching word.
+
+10) replaceAll(searchvalue,replacevalue) - replace all the matching word.
+
+11) Array.from() - divide the given string based on each character and returns an array.(not includes blank space)
+
+
+object
+------
+- is used to store more than one data with more clarity.
+- definition : object is a single variable that hold more than one data of different datatype as key:value pairs that are separated by commas and enclosed within curly bracket.
+
+syntax
+------
+objectname ={
+    key:value,
+    ..........
+    keyn:valuen
+}
+
+
+
+
+
+oops(object oriented programming)
+---------------------------------
+- its a modern programing paradigm/style which consider real time entity into object and class.
+
+
+basic
+-----
+1) class  - is a blue print which contains common features from which diff objects can be create.
+
+2) object - are the real time entities that are created from the class.
+
+3) reference - the memory location where the properties and methods are stored.
+
+property - is Variables inside a class
+methods - functions inside a class
+
+syntax
+------
+class Classname{
+    // 1)property
+    // 2)methods
+    // 3)constructor(){} - used to initialize values to property
+}
+
+- it is not mandatory that all the three , that is property,methods and constructor should always present inside the class.
+
+- instance variable(this.variablename) - inorder to accecc properties inside the class.
+
+objects
+-------
+syntax:-
+
+const objectname = new classname()
+
+- objects are used inorder to access properties or methods outside the class .
+
+
+pillars of oops
+---------------
+1)inheritance
+2)
