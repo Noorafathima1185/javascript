@@ -122,12 +122,23 @@ console.log('-----------------------------------------');
 //  24) Use reduceRight to get the difference between consecutive numbers in each nested array.
 
 // 25) Use arrayFrom to create an array of square roots of all even numbers in the nested arrays.
+console.log('square roots of all even numbers');
+Array.from(data.flat(1).filter(num=>num%2==0).map(num=>num**2)).forEach(item=>{console.log(item);})
+console.log('-------------------------------------------------');
 
 //  26) Use includes to check if the number 15 is present in any of the nested arrays.
+console.log('if the number 15 is present');
+fifteen=data.flat(1).includes(12)
+console.log(fifteen?'yes':'no');
+console.log('-----------------------------------------------');
 
 // 27) Use map to convert each number in the nested arrays to its absolute value.
 
 // 28) Use filter to get all arrays where the first number is less than 5.
+console.log('all arrays where the first number is less than 5');
+five = data.filter(num=>num[0]<=5)
+console.log(five[0]);
+console.log('------------------------------------------------');
 
 // 29) Use reduceRight to concatenate and flatten all nested arrays in reverse order.
 

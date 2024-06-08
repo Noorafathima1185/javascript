@@ -229,8 +229,8 @@ eg: console.log()
 - function definition inside another function
 - closure property:property of a parent function can be accessed inside a child function but not vice versa
 
-asynchronous functions - functions with time delay
-synchronous - functions without time delay
+asynchronous functions - functions with time delay  eg:set Timeout,api
+synchronous - functions without time delay 
 
 
 Data Structure
@@ -242,7 +242,7 @@ Data Structure
 Array 
 ------
 -unlike variables array can store more than one data(can be any type)
-definition: Array is a single variable which can store more than one value that are separated by comas and enclosed within a square bracket.
+definition: Array is a single variable which can store more than one data that are separated by comas and enclosed within a square bracket.
 
 -syntax
 -------
@@ -293,7 +293,7 @@ different way to access array item
 Binary Search
 -------------
 - reduces the time delay (better than linear search)
--array should be arranged in ascending order
+- array should be arranged in ascending order
 
 Nested Array
 ------------
@@ -385,12 +385,247 @@ objects
 -------
 syntax:-
 
-const objectname = new classname()
+const objectname = new Classname()
 
 - objects are used inorder to access properties or methods outside the class .
 
 
 pillars of oops
 ---------------
-1)inheritance
-2)
+1) inheritance - mechanism used to access the methods and properties from other class.
+    - parent class - super class / base class
+    - child class - sub class / derived class
+
+keyword - extends - classical inheritance
+
+object inheritance - keyword - __proto__
+
+2) polymorphism
+   poly - many
+   morphism - forms
+
+   1)method overloading.
+     - method with same name but diff arguments.
+     - it executes based on the no.of arguments.
+     - JavaScript doesnot support method overloading.
+
+     - rest operator(...) - it returns arguments as array.
+     
+   2)method overriding.
+     - method with same name and same no.of arguments.
+     - the last written method.
+     - JavaScript support this concept.
+
+refer
+3) encapsulation
+4) abstraction
+
+error handling/exception handling
+---------------------------------
+exception - run time errors.
+
+try-catch block
+- at a time any one block words,either try or catch
+
+try{
+    statement that can commit error
+}
+catch{
+    statement to handle error
+}
+finally{
+    statement that have to be executed in both case.
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------JavaScript - frontend------------------------------------------------------------------
+
+Browser - application programme which provides an interface for user to interact with all information available in the www.
+
+browser understanding language - html,css,JavaScript
+
+JavaScript - behaviour - html,css
+
+JavaScript accecc dimension
+
+DOM - DOCUMENT OBJECT MODEL
+---------------------------
+- created by browser.
+- its a tree structure of the html document.
+
+BOM - Browser object  model.
+
+
+how to use js filename
+----------------------
+1) internal
+    <script>
+    logic
+    </script>
+    - after body tag.(loading time reduce cheyym)
+2) external
+    create external file with extention as .js
+    - <script src='path'/>
+
+
+how to access HTML tags using js
+-----------------------
+1) document.getElementByTagName('tagname') - return htmlcollection(array)
+2) document.getElementById('id') - return directly the tag.
+3) document.getElementByClassName('classname') - return html collection
+4) document.querySelector(tag/#id/.class) - it return first satisfying tags.
+5) document.querySelectorAll(tag/#id/.class) - NodeList - array
+
+
+- how to change the content in a tag
+------------------------------------
+- innerHTML
+
+
+Events - actions that can lead to an update in DOM.
+------
+1) click
+2) change
+3) submit
+4) load
+5) key down
+
+
+js class
+--------
+date -> systethinte date access cheyym
+
+DataBase
+--------
+- Used to store data.
+- key:value
+- both key and value should be string.
+- large amount of data can be stored.
+
+Browser Storage
+---------------
+- to store data.
+- limited amount of data can be stored.
+
+1) Local Storage
+ - data will be stored permenantly.  
+
+ operations in local storage
+ ---------------------------
+ 1) localstorage.setItem("key",value) - to add data to local storage.
+ 2) localstorage.getItem("key") - to retrieve the data from localstorage.
+ 3) localstorage.removeItem("key") - to delete a dataitem from localstorage.
+
+
+2) Session Storage
+ - not a permanent storage.
+ - remove when the session expires.
+
+ ((JSON.stringify - to convert a object into a string.))
+ ((JSON.parse - to convert string into object.))
+
+
+ API - Applicatiom Programming Interface
+ ---------------------------------------
+ - used to communicate bw two application available in internet.
+
+ types of API - scope ne base cheythitt aanu API ne 4 aayi thirichath
+ ------------
+ 1) public API - globally available
+ 2) private API - eg: a company
+ 3) partner API - eg: some companys and not public
+ 4) composite API - ivarde ellam interconnected ,ithil llarm indavm
+
+ http - hypertext transfer protocol
+------------------------------------
+https, ftp, smtp, tcp, update
+
+http methods
+------------
+1) get method - to retrieve data.
+2) post method - to add data.
+3) put method - to update the data.
+4) delete method -  to remove data.
+
+request have two part
+---------------------
+1) header - header contain the content type and also autherisation tokens...(autherisation purpose)
+2) body - body contain data to be shared.(post and put)
+
+JSON format - JavaScript object notation
+----------------------------------------
+- common format for data sharing.
+
+syntax
+------
+{
+   "key" : "value"
+}
+
+rules
+-----
+- data should be shared as key:value pairs
+- both key and value should be string
+- each key:value pairs should separated by commas and enclosed within curly bracket - object.
+- if the shared data is array then enclosed in square bracket.
+
+response status
+---------------
+1) 1xx series - information
+2) 2xx series - success
+3) 3xx series - redirection
+4) 4xx series - client side error
+5) 5xx series - server side error
+
+
+URL - uniform resource locator
+------------------------------
+- it is the resource address in internet.
+
+RESTFUL API - reprasetational state transfer
+--------------------------------------------
+- it is a sw architecture style that was created to guide the design and development of web.
+
+refer
+-----
+SOAP,RPC
+
+API testing tool
+----------------
+1) thunder client - vs code extension.
+2) postman - real tool for testing API.
+
+how to create API
+-----------------
+1) AJAX - asynchronous JavaScript xml
+        - xml HTTPREQUEST class used
+        - open() - api connection
+        - send() - used to send the request
+        - readystate - is the property inside the class which value will change from 1-4
+        - this change can be seen using onreadystatechange function
+        - response will only be obtained when the value of readystate reaches 4
+        - responseText is the property in the class where we get the data.
+2) FETCH
+    - ES6
+    - promise class
+    - to resolve asynchronous function
+    - this class have 3 state
+          1) resolve - .then()
+          2) reject - .catch()
+          3) pending - not resolved and not rejected.
+
+
+3) ASYNC AWAIT
+   - it makes the promise easier to write.
+   -  .then() is used only once.
+   - can store that data into a variable.
+   - async makes the function returns promise.(function inside which the api call function is written)
+   - await - makes the function pause the executtion and wait for a resolved promise before it continues.(befire the api call function) (time delay ullathinte munnil eg:api call nte munne)
+   - AWAIT should always written inside the async function.
+   - it avoids call back hell.
+
+
+How JavaScript handles asynchronous and synchronous function being a single thread programming language
+------------------------------------------------------------

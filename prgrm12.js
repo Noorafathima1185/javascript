@@ -14,4 +14,4 @@ else if (num%3==0){
 }
 else{
     console.log(`${num} is not divisible by 15,5,3`);
-}
+}z
