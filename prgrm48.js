@@ -39,5 +39,6 @@ while(low<=up){ // mid= low+up/2
         low = mid + 1
     }
 }
-console.log(count);
 console.log(isPresent?'present':'not present');
+console.log(count);
+// console.log(isPresent?'present':'not present');

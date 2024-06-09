@@ -248,7 +248,7 @@ definition: Array is a single variable which can store more than one data that a
 -------
 arrayname = [item1, item2,........itemn]
 
--stored has key value pairs
+-stored has key:value pairs
 key => index
 value => items of the array
 
@@ -261,7 +261,7 @@ length = total no.of items/memory locations
 array methods
 --------------
 1) push - to add items to the end of an array
-2) pop - to remove an item from an array
+2) pop - to remove an item from the end of an array
 3) unshift - to add item to the start of an array
 4) shift - to remove an item from the start 
 5) sort - to arrange an array in ascending or descending order
